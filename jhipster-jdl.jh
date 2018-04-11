@@ -1,0 +1,27 @@
+entity Project {
+	name String required,
+    budget Double required,
+    description String required,
+    open Boolean required,
+    dateDeDebut Instant
+
+}
+
+
+
+entity Category {
+	name String required
+
+}
+
+
+relationship OneToMany {
+	Category{project} to Project{category(name)}
+
+
+}
+paginate  Project with infinite-scroll
+service all with serviceImpl
+
+
+

@@ -1,0 +1,56 @@
+
+<div *ngIf="project">
+    <h2><span jhiTranslate="pfaprojectApp.project.detail.title">Project</span> {{project.name}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="pfaprojectApp.project.name">Name</span></dt>
+        <dd>
+            <span>{{project.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="pfaprojectApp.project.budget">Budget</span></dt>
+        <dd>
+            <span>{{project.budget}}</span>
+        </dd>
+        <dt><span jhiTranslate="pfaprojectApp.project.description">Description</span></dt>
+        <dd>
+            <span>{{project.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="pfaprojectApp.project.open">Open</span></dt>
+        <dd>
+            <span>{{project.open}}</span>
+        </dd>
+        <dt><span jhiTranslate="pfaprojectApp.project.dateDeDebut">Date De Debut</span></dt>
+        <dd>
+            <span>{{project.dateDeDebut | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="pfaprojectApp.project.category">Category</span></dt>
+        <dd>
+            <div *ngIf="project.category">
+                <a [routerLink]="['/category', project.category?.id]">{{project.category?.name}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary" *ngIf="project.user.id==currentuserid" >
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+
+    <button type="button" (click)="afficherMail()">
+        <span>Afficher Adresse Mail de client</span>
+        <span *ngIf="emailAffiche">{{project.user.email}}</span>
+    </button>
+
+</div>

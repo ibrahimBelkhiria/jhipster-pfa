@@ -1,0 +1,27 @@
+
+{
+    "pfaprojectApp": {
+        "prestataire" : {
+            "home": {
+                "title": "Prestataires",
+                "createLabel": "Create a new Prestataire",
+                "createOrEditLabel": "Create or edit a Prestataire",
+                "search": "Search for Prestataire"
+            },
+            "created": "A new Prestataire is created with identifier {{ param }}",
+            "updated": "A Prestataire is updated with identifier {{ param }}",
+            "deleted": "A Prestataire is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Prestataire {{ id }}?"
+            },
+            "detail": {
+                "title": "Prestataire"
+            },
+            "name": "Name",
+            "image": "Image",
+            "description": "Description",
+            "email": "Email",
+            "category": "Category"
+        }
+    }
+}

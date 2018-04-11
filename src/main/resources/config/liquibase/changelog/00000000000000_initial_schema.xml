@@ -104,6 +104,10 @@
                                  constraintName="fk_user_persistent_token"
                                  referencedColumnNames="id"
                                  referencedTableName="jhi_user"/>
+
+
+
+
         <loadData encoding="UTF-8"
                   file="config/liquibase/users.csv"
                   separator=";"

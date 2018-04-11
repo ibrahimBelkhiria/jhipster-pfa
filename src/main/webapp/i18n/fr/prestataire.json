@@ -1,0 +1,27 @@
+
+{
+    "pfaprojectApp": {
+        "prestataire" : {
+            "home": {
+                "title": "Prestataires",
+                "createLabel": "Créer un nouveau Prestataire",
+                "createOrEditLabel": "Créer ou éditer un Prestataire",
+                "search": "Recherche pour Prestataire"
+            },
+            "created": "Un nouveau Prestataire a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Prestataire avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Prestataire avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Prestataire {{ id }} ?"
+            },
+            "detail": {
+                "title": "Prestataire"
+            },
+            "name": "Name",
+            "image": "Image",
+            "description": "Description",
+            "email": "Email",
+            "category": "Category"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<h1>Browse Pojects</h1>
+
+<a class="btn btn-primary" routerLink="/project-new">Post A Project</a>
+<div *ngFor="let project of projects" class="card">
+    <div class="card-title">
+        {{project.name}} --- client : {{project.user.login}}
+    </div>
+    <div class="card-body">
+        {{project.description}}
+    </div>
+    <div class="card-footer"> Budget :{{project.budget}} <a routerLink="/project/{{project.id}}">view details</a></div>
+</div>
